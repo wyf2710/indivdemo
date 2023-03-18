@@ -2,10 +2,15 @@
   <div class="home">
     <el-container>
       <el-header height="118px">
-        <el-input v-model="input1" size="large" placeholder="个人的学习网站" :prefix-icon="Search" clearable>
+        <el-input v-model="input1" size="large" placeholder="个人的学习网站" prefix-icon="Search" clearable>
           <template #append>
-            <el-button :icon="Search" @click="search" />
+            <el-button icon="Search" @click="search" />
           </template>
+          <!-- <template #prefix>
+            <el-icon class="el-input__icon">
+              <search />
+            </el-icon>
+          </template> -->
         </el-input>
 
         <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
@@ -48,7 +53,7 @@
 </template>
 
 <script>
-import { Search } from '@element-plus/icons-vue'
+// import { Search } from '@element-plus/icons-vue'
 // import { ElMessage } from 'element-plus'
 import AutoTextEffectVue from '@/components/AutoTextEffect.vue'
 export default {
@@ -57,7 +62,7 @@ export default {
   data() {
     return {
       input1: '',
-      Search: Search,
+      // Search: 'Search',
       activeIndex: '1',
       count: [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 0, 0, 0]
     }
