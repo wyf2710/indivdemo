@@ -20,7 +20,9 @@
           <el-menu-item index="2">
             <router-link to="/about">About</router-link>
           </el-menu-item>
-          <el-menu-item index="3">3菜单 nn</el-menu-item>
+          <el-menu-item index="3">
+            <router-link to="/music">Music LINK</router-link>
+          </el-menu-item>
           <el-menu-item index="4">4菜单 dd</el-menu-item>
           <el-sub-menu index="5">
             <template #title>多项菜单</template>

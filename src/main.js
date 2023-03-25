@@ -6,7 +6,11 @@ import store from './store'
 import ElementPlus from 'element-plus'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import 'element-plus/dist/index.css'
-let app = createApp(App)
+
+// import axios from './axios/axiosinstance.js'
+import axios from 'axios'
+
+const app = createApp(App)
 app.use(ElementPlus)
 
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
@@ -14,3 +18,7 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 }
 
 app.use(store).use(router).mount('#app')
+
+app.config.globalProperties.$axios = axios
+console.log(app.config.globalProperties.$axios);
+
